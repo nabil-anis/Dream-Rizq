@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dream Rizq - A Spiritual Haven</title>
+  <link rel="icon" href="drr.jpg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New&family=Playfair+Display:wght@600&display=swap"
+    rel="stylesheet">
+  <style>
+    
+    body {
+      font-family: 'Georgia', serif;
+      background-image: url('https://www.transparenttextures.com/patterns/arabesque.png');
+    }
+
+    #hadiths .calligraphy {
+      color: white !important;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .calligraphy {
+      font-family: 'Scheherazade New', serif;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
+
+    .scroll-card {
+      background: #fdfaf6;
+      border: 1px solid #e2d9c3;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .scroll-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .ameen-button {
+      background-color: #c19a6b;
+      color: white;
+      padding: 0.8rem 2rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .ameen-button:hover {
+      background-color: #a98154;
+    }
+
+    .scroll-card .calligraphy {
+      font-size: 1.8rem;
+      color: #5e412f;
+      text-align: center;
+    }
+
+    /* Animation for Ameen button feedback */
+    .ameen-feedback {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: #4caf50;
+      text-align: center;
+    }
+
+    .header-nav a {
+      transition: color 0.3s ease;
+    }
+
+    .header-nav a:hover {
+      color: #f9f7f1;
+    }
+  </style>
+</head>
+
+<body class="bg-[#f9f7f1] text-[#1a2c2b]">
+
+  <!-- Header -->
+  <!-- Responsive Navbar -->
+  <header class="bg-[#102a27] text-white">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="text-xl font-bold">Dream Rizq</div>
+      <button class="md:hidden block" id="navToggle">
+        <!-- Hamburger Icon -->
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <nav class="hidden md:flex space-x-6" id="navMenu">
+        <a href="#home" class="hover:text-gray-300">Home</a>
+        <a href="#duas" class="hover:text-gray-300">Duas</a>
+        <a href="#hadiths" class="hover:text-gray-300">Hadiths</a>
+        <a href="#contact" class="hover:text-gray-300">Contact</a>
+      </nav>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="md:hidden px-4 pb-4 hidden flex-col space-y-2" id="mobileMenu">
+      <a href="#home" class="block">Home</a>
+      <a href="#duas" class="block">Duas</a>
+      <a href="#hadiths" class="block">Hadiths</a>
+      <a href="#contact" class="block">Contact</a>
+    </div>
+
+    <script>
+      const navToggle = document.getElementById('navToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+      navToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    </script>
+  </header>
+
+
+  <!-- Hero Section -->
+  <section class="text-center py-20 bg-[#efe9dd]">
+    <div class="container mx-auto">
+      <div class="calligraphy text-[#5e412f] mb-2">بِسْمِ ٱللّٰهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ</div>
+      <h2 class="text-4xl font-bold mb-4">A Haven for Remembrance</h2>
+      <p class="text-lg max-w-2xl mx-auto mb-6">Read duas, reflect on hadiths, and earn good deeds with every scroll.
+        Welcome to a sanctuary of timeless blessings.</p>
+      <a href="#duas" class="bg-[#102a27] text-white px-6 py-3 rounded hover:bg-[#0a1c1b]">Explore Now</a>
+    </div>
+  </section>
+
+  <!-- Daily Ayah Section -->
+  <section class="container mx-auto px-6 py-10 text-center">
+    <h3 class="text-2xl font-semibold mb-4">Today's Spiritual Rizq</h3>
+    <div class="scroll-card">
+      <div class="calligraphy mb-2">اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ</div>
+      <p>O Allah, I ask You for forgiveness and well-being.</p>
+      <button class="ameen-button" onclick="showTestimony()">Ameen</button>
+      <div id="ameen-feedback" class="ameen-feedback hidden">
+        May every tap of ‘Ameen’ bear witness for us on the Day of Judgment.
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function showTestimony() {
+      document.getElementById('ameen-feedback').classList.remove('hidden');
+    }
+  </script>
+
+  <!-- Duas Section -->
+  <section id="duas" class="bg-[#f9f7f1] py-16">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-6 text-center">Powerful Duas</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+
+        <!-- Dua 1 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا
+            عَذَابَ النَّارِ</div>
+          <p><em>Transliteration:</em> Rabbana atina fid-dunya hasanatan wa fil-akhirati hasanatan waqina 'adhab an-nar
+          </p>
+          <br>
+          <p>Our Lord, give us in this world [that which is] good and in the Hereafter [that which is] good and protect
+            us from the punishment of the Fire.</p>
+          <p class="text-sm text-gray-500">[Qur'an 2:201]</p>
+        </div>
+
+        <!-- Dua 2 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللّهُـمَّ أَنْتَ رَبِّـي لا إلهَ إِلاّ أَنْتَ</div>
+          <p><em>Transliteration:</em> Allahumma anta Rabbi la ilaha illa Anta</p>
+          <br>
+          <p>O Allah, You are my Lord, there is no deity except You.</p>
+          <p class="text-sm text-gray-500">[Sahih Bukhari 6306]</p>
+        </div>
+
+        <!-- Dua 3 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">رَبِّ اغْفِرْ لِي وَارْحَمْنِي وَاهْدِنِي وَعَافِنِي وَارْزُقْنِي</div>
+          <p><em>Transliteration:</em> Rabbi ighfir li, warhamni, wahdini, wa 'afini, warzuqni</p>
+          <br>
+          <p>My Lord, forgive me, have mercy on me, guide me, grant me health, and provide me with sustenance.</p>
+          <p class="text-sm text-gray-500">[Sahih Muslim 2709]</p>
+        </div>
+
+        <!-- Dua 4 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللّهُـمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْفَقْرِ وَالْقِلَّةِ وَالذِّلَّةِ</div>
+          <p><em>Transliteration:</em> Allahumma inni aʿudhu bika minal-faqri wal-qillati wadh-dhillah</p>
+          <br>
+          <p>O Allah, I seek refuge in You from poverty, scarcity, and humiliation.</p>
+          <p class="text-sm text-gray-500">[Sahih Bukhari 2823]</p>
+        </div>
+
+        <!-- Dua 5 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللّهُمَّ اجْعَلْ فِي قَلْبِي نُورًا وَفِي لِسَانِي نُورًا</div>
+          <p><em>Transliteration:</em> Allahumma ajʿal fi qalbi nuran wa fi lisani nuran</p>
+          <br>
+          <p>O Allah, place light in my heart and light upon my tongue.</p>
+          <p class="text-sm text-gray-500">[Sahih Muslim 763]</p>
+        </div>
+
+        <!-- Dua 6 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">رَبِّ لَا تَذَرْنِي فَرْدًا وَأَنْتَ خَيْرُ الْوَارِثِينَ</div>
+          <p><em>Transliteration:</em> Rabbi la tadharni fardan wa anta khayrul-warithin</p>
+          <br>
+          <p>My Lord, do not leave me alone [without offspring], while You are the best of inheritors.</p>
+          <p class="text-sm text-gray-500">[Qur'an 21:89]</p>
+        </div>
+
+        <!-- Dua 7 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللّهُمَّ اجْعَلْنَا مِنَ الَّذِينَ سَمِعُوا الْقَوْلَ فَاتَّبَعُوا أَحْسَنَهُ
+          </div>
+          <p><em>Transliteration:</em> Allahumma ajʿalna mina alladhina samiʿu al-qawla fattabaʿu ahsanah</p>
+          <br>
+          <p>O Allah, make us among those who listen to the word and follow the best of it.</p>
+          <p class="text-sm text-gray-500">[Qur'an 39:18]</p>
+        </div>
+
+        <!-- Dua 8 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">رَبِّ زِدْنِي عِلْمًا</div>
+          <p><em>Transliteration:</em> Rabbi zidni ʿilma</p>
+          <br>
+          <p>My Lord, increase me in knowledge.</p>
+          <p class="text-sm text-gray-500">[Qur'an 20:114]</p>
+        </div>
+
+        <!-- Dua 9 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">سُبْحَانَ اللَّهِ وَبِحَمْدِهِ، سُبْحَانَ اللَّهِ الْعَظِيمِ</div>
+          <p><em>Transliteration:</em> Subhan Allahi wa bihamdihi, Subhan Allahil-ʿAzim</p>
+          <br>
+          <p>Glory is to Allah and all praise is to Him; glory is to Allah, the Most Great.</p>
+          <p class="text-sm text-gray-500">[Sahih Bukhari 6405; Sahih Muslim 2694]</p>
+        </div>
+
+        <!-- Dua 10 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">حَسْبِيَ اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ، عَلَيْهِ تَوَكَّلْتُ، وَهُوَ رَبُّ
+            الْعَرْشِ الْعَظِيمِ</div>
+          <p><em>Transliteration:</em> Hasbiyallahu la ilaha illa Huwa, ʿalayhi tawakkaltu, wa Huwa Rabbul-ʿArshil-ʿAzim
+          </p>
+          <br>
+          <p>Allah is sufficient for me; there is no deity except Him. In Him I have placed my trust, and He is the Lord
+            of the Mighty Throne.</p>
+          <p class="text-sm text-gray-500">[Qur'an 9:129]</p>
+        </div> <!-- Dua 11 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللّهُـمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْجُوعِ وَالْجَزَعِ</div>
+          <p><em>Transliteration:</em> Allahumma inni aʿudhu bika minal-jooʿi wal-jazʿi</p>
+          <br>
+          <p>O Allah, I seek refuge in You from hunger and from anxiety.</p>
+          <p class="text-sm text-gray-500">[Sahih Muslim 1014]</p>
+        </div>
+
+        <!-- Dua 12 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللّهُـمَّ اجْعَلْ فِي قَلْبِي رَحْمَةً وَفِي لِسَانِي رَحْمَةً</div>
+          <p><em>Transliteration:</em> Allahumma ajʿal fi qalbi rahmatan wa fi lisani rahmatan</p>
+          <br>
+          <p>O Allah, place mercy in my heart and mercy upon my tongue.</p>
+          <p class="text-sm text-gray-500">[Sunan Ibn Majah 1/205]</p>
+        </div>
+
+        <!-- Dua 13 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللّهُـمَّ لَا تُؤَاخِذْنِي بِمَا يَقُولُونَ وَاجْعَلْنِي خَيْرًا مِّمَّا
+            يَظُنُّونَ</div>
+          <p><em>Transliteration:</em> Allahumma la tuʾakhidhni bima yaquluna wa ajilni khayran mimma yazunnun</p>
+          <br>
+          <p>O Allah, do not hold me accountable for what they say, and make me better than what they think of me.</p>
+          <p class="text-sm text-gray-500">[Sunan Abi Dawood 2/318]</p>
+        </div>
+
+        <!-- Dua 14 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللّهُـمَّ إِنِّي أَعُوذُ بِكَ مِنْ شَرِّ فِتْنَةِ الدُّنْيَا وَمِنْ شَرِّ
+            فِتْنَةِ الْمَسِيحِ الدَّجَّالِ</div>
+          <p><em>Transliteration:</em> Allahumma inni aʿudhu bika min sharri fitnati ad-dunya wa min sharri fitnati
+            al-Masih ad-Dajjal</p>
+          <br>
+          <p>O Allah, I seek refuge in You from the evil of the trials of this world and from the evil of the trial of
+            the false Messiah (Dajjal).</p>
+          <p class="text-sm text-gray-500">[Sahih Muslim 2937]</p>
+        </div>
+
+        <!-- Dua 15 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللّهُـمَّ أَعِزَّ الْإِسْلَامَ وَأَعِزَّ الْمُسْلِمِينَ</div>
+          <p><em>Transliteration:</em> Allahumma aʿizzil-Islama wa aʿizzil-Muslimeen</p>
+          <br>
+          <p>O Allah, honor Islam and honor the Muslims.</p>
+          <p class="text-sm text-gray-500">[Sunan Abi Dawood 2/312]</p>
+        </div>
+
+        <!-- Dua 16 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللّهُـمَّ إِنِّي أَسْأَلُكَ رَحْمَتَكَ وَمَغْفِرَتَكَ وَعَافِيَتَكَ</div>
+          <p><em>Transliteration:</em> Allahumma inni asʾaluka rahmataka wa maghfirataka wa ʿafiyataka</p>
+          <br>
+          <p>O Allah, I ask You for Your mercy, forgiveness, and health.</p>
+          <p class="text-sm text-gray-500">[Sunan At-Tirmidhi 3/171]</p>
+        </div>
+
+        <!-- Dua 17 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللّهُـمَّ عَافِنِي فِي بَدَنِي وَعَافِنِي فِي سَمْعِي وَعَافِنِي فِي بَصَرِي
+          </div>
+          <p><em>Transliteration:</em> Allahumma aʿafini fi badani wa aʿafini fi samʿi wa aʿafini fi basari</p>
+          <br>
+          <p>O Allah, grant me health in my body, and in my hearing and in my sight.</p>
+          <p class="text-sm text-gray-500">[Sunan Ibn Majah 1/420]</p>
+        </div>
+
+        <!-- Dua 18 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللّهُـمَّ اجْعَلْ قَلْبِي مُدْنِيًا لَكَ وَذُنُوبِي مَغْفُورَةً</div>
+          <p><em>Transliteration:</em> Allahumma ajʿal qalbi mudnīyan laka wa dhunubi maghfuratan</p>
+          <br>
+          <p>O Allah, make my heart inclined towards You and forgive my sins.</p>
+          <p class="text-sm text-gray-500">[Sahih Muslim 2624]</p>
+        </div>
+
+        <!-- Dua 19 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللّهُـمَّ قِنِي عَذَابَ جَهَنَّمَ</div>
+          <p><em>Transliteration:</em> Allahumma qini ʿadhab jahannam</p>
+          <br>
+          <p>O Allah, protect me from the punishment of Hell.</p>
+          <p class="text-sm text-gray-500">[Sahih Muslim 214]</p>
+        </div>
+
+        <!-- Dua 20 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللّهُـمَّ إِنِّي أَسْأَلُكَ الْهُدَى وَالتُّقَى وَالْعَفَافَ وَالْغِنَى</div>
+          <p><em>Transliteration:</em> Allahumma inni asʾaluka al-huda wa at-tuqa wal-ʿafafa wal-ghina</p>
+          <br>
+          <p>O Allah, I ask You for guidance, piety, chastity, and wealth.</p>
+          <p class="text-sm text-gray-500">[Sahih Muslim 2624]</p>
+        </div>
+        <!-- Dua 21 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">يَا مُقَلِّبَ الْقُلُوبِ ثَبِّتْ قَلْبِي عَلَىٰ دِينِكَ</div>
+          <p><em>Transliteration:</em> Ya Muqallibal Quloob, Thabbit Qalbi Ala Dinik</p>
+          <br>
+          <p>O Turner of the hearts, make my heart firm upon Your religion.</p>
+          <p class="text-sm text-gray-500">[Sunan At-Tirmidhi 2140]</p>
+        </div>
+        <!-- Dua 22 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ عَذَابِ جَهَنَّمَ</div>
+          <p><em>Transliteration:</em> Allahumma inni a'udhu bika min 'adhabi Jahannam</p>
+          <br>
+          <p>O Allah, I seek refuge in You from the punishment of Hell.</p>
+          <p class="text-sm text-gray-500">[Sahih Muslim 770]</p>
+        </div>
+
+        <!-- Dua 23 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">رَبِّ اغْفِرْ لِي وَارْحَمْنِي وَاهْدِنِي وَاجْبُرْنِي</div>
+          <p><em>Transliteration:</em> Rabbi ghfir li warhamni wahdini wajburni</p>
+          <br>
+          <p>My Lord, forgive me, have mercy on me, guide me, and mend my affairs.</p>
+          <p class="text-sm text-gray-500">[Sunan At-Tirmidhi 3527]</p>
+        </div>
+
+        <!-- Dua 24 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللَّهُمَّ رَبِّ أَعُوذُ بِكَ مِنْ شَرِّ مَا خَلَقْتَ</div>
+          <p><em>Transliteration:</em> Allahumma rabbi a'udhu bika min sharri ma khalaqt</p>
+          <br>
+          <p>O Allah, Lord, I seek refuge in You from the evil of what You have created.</p>
+          <p class="text-sm text-gray-500">[Sahih Muslim 2708]</p>
+        </div>
+
+        <!-- Dua 25 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللَّهُمَّ أَحْيِنِي مَا كَانَتِ الْحَيَاةُ خَيْرًا لِي</div>
+          <p><em>Transliteration:</em> Allahumma ahyini ma kanatil hayatu khayran li</p>
+          <br>
+          <p>O Allah, keep me alive as long as life is good for me.</p>
+          <p class="text-sm text-gray-500">[Sahih Bukhari 6419]</p>
+        </div>
+
+        <!-- Dua 26 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللَّهُمَّ إِنِّي أَسْأَلُكَ الرَّحْمَةَ وَالْمَغْفِرَةَ</div>
+          <p><em>Transliteration:</em> Allahumma inni as'alu ka ar-rahmatan wal-maghfirah</p>
+          <br>
+          <p>O Allah, I ask You for mercy and forgiveness.</p>
+          <p class="text-sm text-gray-500">[Sunan Abu Dawood 5045]</p>
+        </div>
+
+        <!-- Dua 27 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللَّهُمَّ اجْعَلْنِي مِنْ أَهْلِ الْجَنَّةِ</div>
+          <p><em>Transliteration:</em> Allahumma ajilni min ahlil Jannah</p>
+          <br>
+          <p>O Allah, make me among the people of Paradise.</p>
+          <p class="text-sm text-gray-500">[Sahih Muslim 1897]</p>
+        </div>
+
+        <!-- Dua 28 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللَّهُمَّ اجْعَلْنِي مِنَ الَّذِينَ يَقُولُونَ رَبُّنَا غَفَرْتَ لَنَا</div>
+          <p><em>Transliteration:</em> Allahumma ajilni min alladhina yaqooloona rabbana ghafarta lana</p>
+          <br>
+          <p>O Allah, make me among those who say, "Our Lord, You have forgiven us."</p>
+          <p class="text-sm text-gray-500">[Sahih Bukhari 6341]</p>
+        </div>
+
+        <!-- Dua 29 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللَّهُمَّ إِنِّي أَسْأَلُكَ فَرَجًا قَرِيبًا</div>
+          <p><em>Transliteration:</em> Allahumma inni as'alu ka farajan qareeban</p>
+          <br>
+          <p>O Allah, I ask You for a quick relief.</p>
+          <p class="text-sm text-gray-500">[Sunan Abu Dawood 1569]</p>
+        </div>
+
+        <!-- Dua 30 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللَّهُمَّ إِنِّي أَسْأَلُكَ حُسْنَ الْمَرَادِ</div>
+          <p><em>Transliteration:</em> Allahumma inni as'alu ka husna al-maraad</p>
+          <br>
+          <p>O Allah, I ask You for a good outcome.</p>
+          <p class="text-sm text-gray-500">[Sahih Muslim 2752]</p>
+        </div>
+
+        <!-- Dua 31 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللَّهُمَّ إِنِّي أَسْأَلُكَ الرِّزْقَ وَالْبَرَكَةَ</div>
+          <p><em>Transliteration:</em> Allahumma inni as'alu ka ar-rizqa wal-barakata</p>
+          <br>
+          <p>O Allah, I ask You for provision and blessings.</p>
+          <p class="text-sm text-gray-500">[Sunan Ibn Majah 1404]</p>
+        </div>
+
+        <!-- Dua 32 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللَّهُمَّ إِنِّي أَسْأَلُكَ سَعَادَةً دَائِمَةً</div>
+          <p><em>Transliteration:</em> Allahumma inni as'alu ka sa'adatan da'imatan</p>
+          <br>
+          <p>O Allah, I ask You for eternal happiness.</p>
+          <p class="text-sm text-gray-500">[Sunan Ibn Majah 1159]</p>
+        </div>
+
+        <!-- Dua 33 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللَّهُمَّ تَوَلَّنِي فِي كُلِّ أَمْرِي</div>
+          <p><em>Transliteration:</em> Allahumma tawallani fi kulli amri</p>
+          <br>
+          <p>O Allah, take charge of all my affairs.</p>
+          <p class="text-sm text-gray-500">[Sunan At-Tirmidhi 1332]</p>
+        </div>
+
+        <!-- Dua 34 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللَّهُمَّ اجْعَلْنِي مِنَ الَّذِينَ يَسْتَغْفِرُونَ فِي كُلِّ وَقْتٍ</div>
+          <p><em>Transliteration:</em> Allahumma ajilni min alladhina yastaghfiruna fi kulli waqtin</p>
+          <br>
+          <p>O Allah, make me among those who seek forgiveness at all times.</p>
+          <p class="text-sm text-gray-500">[Sunan Ibn Majah 1666]</p>
+        </div>
+
+        <!-- Dua 35 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللَّهُمَّ اجْعَلْنِي مِنْ أَهْلِ الْمَغْفِرَةِ وَالرَّحْمَةِ</div>
+          <p><em>Transliteration:</em> Allahumma ajilni min ahlil maghfirah wa ar-rahmah</p>
+          <br>
+          <p>O Allah, make me among the people of forgiveness and mercy.</p>
+          <p class="text-sm text-gray-500">[Sahih Muslim 2858]</p>
+        </div>
+
+        <!-- Dua 36 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللَّهُمَّ إِنِّي أَسْأَلُكَ حَبِيبِي وَمُحَمَّدٍ نَبِيِّكَ</div>
+          <p><em>Transliteration:</em> Allahumma inni as'alu ka habibi wa Muhammadin nabiyyika</p>
+          <br>
+          <p>O Allah, I ask You for my beloved and the Prophet Muhammad, Your Messenger.</p>
+          <p class="text-sm text-gray-500">[Sunan Abu Dawood 1286]</p>
+        </div>
+
+        <!-- Dua 37 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللَّهُمَّ عَافِنِي فِي بَدَنِي</div>
+          <p><em>Transliteration:</em> Allahumma 'afini fi badani</p>
+          <br>
+          <p>O Allah, grant me health in my body.</p>
+          <p class="text-sm text-gray-500">[Sunan At-Tirmidhi 3529]</p>
+        </div>
+
+        <!-- Dua 38 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللَّهُمَّ رَبِّ لَا تَجْعَلْنِي فِي قَلْبِي هَمًّا</div>
+          <p><em>Transliteration:</em> Allahumma rabbi la taj'alni fi qalbi hammans</p>
+          <br>
+          <p>O Allah, Lord, do not make me have sorrow in my heart.</p>
+          <p class="text-sm text-gray-500">[Sunan Ibn Majah 1415]</p>
+        </div>
+
+        <!-- Dua 39 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنْ كُلِّ خَيْرٍ</div>
+          <p><em>Transliteration:</em> Allahumma inni as'alu ka min kulli khayrin</p>
+          <br>
+          <p>O Allah, I ask You for every good.</p>
+          <p class="text-sm text-gray-500">[Sunan Abu Dawood 704]</p>
+        </div>
+
+        <!-- Dua 40 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللَّهُمَّ إِنِّي أَسْأَلُكَ الْجَنَّةَ</div>
+          <p><em>Transliteration:</em> Allahumma inni as'alu ka al-Jannah</p>
+          <br>
+          <p>O Allah, I ask You for Paradise.</p>
+          <p class="text-sm text-gray-500">[Sahih Muslim 1907]</p>
+        </div>
+        <!-- Dua 41 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللَّهُمَّ إِنِّي أَسْأَلُكَ عِزًّا لَا يُهْزَمُ</div>
+          <p><em>Transliteration:</em> Allahumma inni as'alu ka 'izzan la yuhzam</p>
+          <br>
+          <p>O Allah, I ask You for a dignity that cannot be defeated.</p>
+          <p class="text-sm text-gray-500">[Sunan At-Tirmidhi 3589]</p>
+        </div>
+
+        <!-- Dua 42 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللَّهُمَّ اجْعَلْنِي فِي رَحْمَتِكَ وَمَغْفِرَتِكَ</div>
+          <p><em>Transliteration:</em> Allahumma ajilni fi rahmatika wa maghfiratika</p>
+          <br>
+          <p>O Allah, make me among Your mercy and forgiveness.</p>
+          <p class="text-sm text-gray-500">[Sahih Bukhari 6852]</p>
+        </div>
+
+        <!-- Dua 43 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللَّهُمَّ اجْعَلْ لِي فِي قَلْبِي نُورًا</div>
+          <p><em>Transliteration:</em> Allahumma ajilni fi qalbi nooran</p>
+          <br>
+          <p>O Allah, place light in my heart.</p>
+          <p class="text-sm text-gray-500">[Sahih Muslim 295]</p>
+        </div>
+
+        <!-- Dua 44 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللَّهُمَّ رَبِّ لَا تَكِلْنِي إِلَىٰ نَفْسِي طَرْفَةَ عَيْنٍ</div>
+          <p><em>Transliteration:</em> Allahumma rabbi la takilni ila nafsi tarfata 'aynin</p>
+          <br>
+          <p>O Allah, Lord, do not leave me to myself for the blink of an eye.</p>
+          <p class="text-sm text-gray-500">[Sunan At-Tirmidhi 3513]</p>
+        </div>
+
+        <!-- Dua 45 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللَّهُمَّ إِنِّي أَسْأَلُكَ أَنْ تَحْفَظَنِي فِي دِينِي وَدُنْيَايَ</div>
+          <p><em>Transliteration:</em> Allahumma inni as'alu ka an tahfazani fi deeni wa dunyaya</p>
+          <br>
+          <p>O Allah, I ask You to protect me in my faith and my worldly affairs.</p>
+          <p class="text-sm text-gray-500">[Sunan Ibn Majah 2825]</p>
+        </div>
+
+        <!-- Dua 46 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللَّهُمَّ اجْعَلْنِي فِي زُرَيْبَتِكَ مِنْ عِبَادِكِ</div>
+          <p><em>Transliteration:</em> Allahumma ajilni fi zuraibatika min 'ibadika</p>
+          <br>
+          <p>O Allah, make me among the group of Your servants who are close to You.</p>
+          <p class="text-sm text-gray-500">[Sahih Muslim 220]</p>
+        </div>
+
+        <!-- Dua 47 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ كُلِّ قَلْبٍ لَا يَخْشَعُ</div>
+          <p><em>Transliteration:</em> Allahumma inni a'udhu bika min kulli qalbin la yakhsha'u</p>
+          <br>
+          <p>O Allah, I seek refuge in You from every heart that does not humble itself.</p>
+          <p class="text-sm text-gray-500">[Sahih Muslim 6947]</p>
+        </div>
+
+        <!-- Dua 48 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللَّهُمَّ لَا تَرُدَّنِي خَائِبًا</div>
+          <p><em>Transliteration:</em> Allahumma la turruddanī khā'ibā</p>
+          <br>
+          <p>O Allah, do not return me disappointed.</p>
+          <p class="text-sm text-gray-500">[Sunan Ibn Majah 3035]</p>
+        </div>
+
+        <!-- Dua 49 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللَّهُمَّ إِنِّي أَسْأَلُكَ فِتْنَةً لَا تُؤَذِي الْمُسْلِمِينَ</div>
+          <p><em>Transliteration:</em> Allahumma inni as'alu ka fitnatan la tu'adhdhī al-muslimeen</p>
+          <br>
+          <p>O Allah, I ask You to protect us from trials that harm the Muslims.</p>
+          <p class="text-sm text-gray-500">[Sunan Abu Dawood 1514]</p>
+        </div>
+
+        <!-- Dua 50 -->
+        <div class="scroll-card">
+          <div class="calligraphy mb-2">اللَّهُمَّ إِنِّي أَسْأَلُكَ الْجَنَّةَ وَمَا قَرَّبَ إِلَيْهَا مِنْ قَوْلٍ
+            وَفِعْلٍ</div>
+          <p><em>Transliteration:</em> Allahumma inni as'alu ka al-Jannah wa ma qarraba ilayha min qawlin wa fi'l</p>
+          <br>
+          <p>O Allah, I ask You for Paradise and everything that brings me closer to it in speech and action.</p>
+          <p class="text-sm text-gray-500">[Sunan At-Tirmidhi 2587]</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  </section>
+
+
+  <!-- Hadiths Section -->
+  <section id="hadiths" class="bg-[#102a27] text-white py-16">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-6 text-center">Pearls from the Prophet ﷺ</h2>
+
+      <!-- Hadith 1 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«إِنَّما الأَعْمَالُ بِالنِّيَّاتِ وَإِنَّما لِكُلِّ امرِئٍ مَا نَوَى»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Innamā al-a‘mālu bin-niyyāti wa innamā likulli imri’imā nawwā</p>
+        <br>
+        <p>"Actions are judged by intentions, so each person will be rewarded according to what he intended." </p>
+        <p class="text-sm text-gray-500">[Sahih al-Bukhari 1]</p>
+      </div>
+
+      <!-- Hadith 2 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«خَيْرُ النَّاسِ أَنْفَعُهُمْ لِلنَّاسِ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Khayru an-nāsi anfa‘uhum li-n-nāsi</p>
+        <br>
+        <p>"The best of people are those that bring most benefit to the rest of mankind." </p>
+        <p class="text-sm text-gray-500">[Daraqutni, Hasan]</p>
+      </div>
+
+      <!-- Hadith 3 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«مَن دَلَّ عَلَىٰ خَيْرٍ فَلَهُ مِثْلُ أَجْرِ فَاعِلِهِ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Man dallā ‘alā khayrin falahu mithlu ajri fā‘ilihi</p>
+        <br>
+        <p>"Whoever shows you a good way, follow it, for the one who follows good deeds, his reward will be equal to
+          that of the one who shows it." </p>
+        <p class="text-sm text-gray-500">[Sahih Muslim 1017]</p>
+      </div>
+
+      <!-- Hadith 4 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«لَا تَحَاسَدُوا وَلَا تَبَاغَضُوا وَلَا تَدَابَرُوا وَكُونُوا عِبَادَ اللَّهِ
+          إِخْوَانًا»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Lā taḥāsadū wa lā tabāghadū wa lā tadābarū wa kūnū ‘ibād Allāhi ikhwanā</p>
+        <br>
+        <p>"Do not envy one another. Do not hate one another. Do not turn your backs on one another. And do not undercut
+          one another in trade. Be, O servants of Allah, brothers." </p>
+        <p class="text-sm text-gray-500">[Sahih Muslim 2566]</p>
+      </div>
+
+      <!-- Hadith 5 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«لَا قُوَّةَ لِلرَّجُلِ فِي لِيَاقَتِهِ إِلَّا أَنْ يَحْتَسِي غَضَبَهُ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Lā quwwata li-rajuli fī liyāqatihi illā an yaḥtasi ghadabahu</p>
+        <br>
+        <p>"The strong man is not the one who is able to wrestle, but the strong man is he who controls himself when he
+          gets angry." </p>
+        <p class="text-sm text-gray-500">[Sahih al-Bukhari 6114]</p>
+      </div>
+
+      <!-- Hadith 6 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«خَيْرُكُمْ أَحْسَنُكُمْ خُلُقًا»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Khayrukum aḥsanukum khuluqā</p>
+        <br>
+        <p>"The best among you are those who have the best manners and character." </p>
+        <p class="text-sm text-gray-500">[Sahih al-Bukhari 6119]</p>
+      </div>
+
+      <!-- Hadith 7 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«إِذَا أَحَبَّ اللَّهُ عَبْدًا نَادَىٰ جِبْرِيلَ أَنْي أَحْبِبْ فُلَانًا
+          فَيُحِبُّهُ جِبْرِيلُ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Idhā aḥabba Allāhu ‘abdan nādā Jibrīl anī aḥibb fulānan fayuḥibbuhu Jibrīl
+        </p>
+        <br>
+        <p>"When Allah loves a servant, He calls Jibril and says: ‘I love so-and-so, so love him.’ Then Jibril loves
+          him, and makes an announcement in the heavens saying: ‘Allah loves so-and-so, so love him.’ And the
+          inhabitants of the heavens love him. Then acceptance is placed for him on earth." </p>
+        <p class="text-sm text-gray-500">[Sahih Muslim 2637]</p>
+      </div>
+
+      <!-- Hadith 8 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«مَنْ لَا يَشْكُرُ النَّاسَ لَا يَشْكُرُ اللَّهَ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Man lā yashkuru an-nāsa lā yashkuru Allāh</p>
+        <br>
+        <p>"Whoever does not thank people, does not thank Allah." </p>
+        <p class="text-sm text-gray-500">[Sunan Abi Dawood 4811]</p>
+      </div>
+
+      <!-- Hadith 9 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«خَيْرُكُمْ خَيْرُكُمْ لِأَزْوَاجِهِ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Khayrukum khayrukum li-azwājih</p>
+        <br>
+        <p>"The best of you are those who are the best to their women." </p>
+        <p class="text-sm text-gray-500">[Sunan Ibn Majah 1854]</p>
+      </div>
+
+      <!-- Hadith 10 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«مَن فَأَجَلَ حَاجَةَ أَخِيهِ فَفَأَجَلَ اللَّهُ حَاجَتَهُ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Man fa’ajala ḥājata akhīhi fa-fa’ajala Allāhu ḥājatahu</p>
+        <br>
+        <p>"Whoever fulfills the needs of his brother, Allah will fulfill his needs." </p>
+        <p class="text-sm text-gray-500">[Sahih al-Bukhari 2442]</p>
+      </div>
+
+      <!-- Hadith 11 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«إِذَا لَمْ تَسْتَحِي فَفَعَلَ مَا شِئْتَ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Idhā lam tastahī fa-fa‘al mā shi’t</p>
+        <br>
+        <p>"If you do not feel ashamed, then do as you wish." </p>
+        <p class="text-sm text-gray-500">[Sahih al-Bukhari 6120]</p>
+      </div>
+
+      <!-- Hadith 12 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«لَا يُؤْمِنُ أَحَدُكُمْ حَتَّى يُحِبَّ لِأَخِيهِ مَا يُحِبُّ لِنَفْسِهِ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Lā yu’minu aḥadukum ḥattā yuḥibbu li-akhīhi mā yuḥibbu linafsihi</p>
+        <br>
+        <p>"A believer is not the one who eats his fill while his neighbor goes hungry." </p>
+        <p class="text-sm text-gray-500">[Sahih Muslim 1035]</p>
+      </div>
+
+      <!-- Hadith 13 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«مَنْ تَعَلَّمَ عِلْمًا فَأَعْلَمَهُ لِغَيْرِهِ فَأَجْرُهُ مَعَ أَجْرِهِ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Man ta‘allama ‘ilman fa-‘allamahu li-ghayrihi fa-ajruhu ma‘a ajrihi</p>
+        <br>
+        <p>"The one who learns knowledge and teaches it, is like the one who spends in charity. The reward of both will
+          be equal." </p>
+        <p class="text-sm text-gray-500">[Sunan Ibn Majah 247]</p>
+      </div>
+
+      <!-- Hadith 14 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«إِنَّ اللَّهَ لَا يَنْظُرُ إِلَىٰ أَمْوَالِكُمْ وَلَا إِلَىٰ أَجْسَامِكُمْ
+          وَلَكِنْ يَنْظُرُ إِلَىٰ قُلُوبِكُمْ وَأَعْمَالِكُمْ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Inna Allāha lā yanzuru ilā amwālikum wa lā ilā ajsāmikum walākin yanzuru
+          ilā qulūbikum wa a‘mālikum</p>
+        <br>
+        <p>"Indeed, Allah does not look at your wealth or your bodies, but He looks at your hearts and your deeds." </p>
+        <p class="text-sm text-gray-500">[Sahih Muslim 2564]</p>
+      </div>
+
+      <!-- Hadith 15 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«مَنْ صَامَ رَمَضَانَ إِيمَانًا وَاحْتِسَابًا غُفِرَ لَهُ مَا تَقَدَّمَ مِنْ
+          ذَنْبِهِ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Man ṣāma Ramaḍāna īmānan wa iḥtisāban ghufira lahu mā taqaddama min
+          dhanbihi</p>
+        <br>
+        <p>"Whoever fasts during Ramadan with faith and hoping for reward, his past sins will be forgiven." </p>
+        <p class="text-sm text-gray-500">[Sahih al-Bukhari 38]</p>
+      </div>
+
+      <!-- Hadith 16 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«لَا تَحْقِرَنَّ مِنَ الْمَعْرُوفِ شَيْئًا وَلَوْ أَنْ تَلْقَىٰ أَخَاكَ بِوَجْهِ
+          طَلِيقٍ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Lā taḥqiranna mina al-ma‘rūfi shay’ān wa law an talqā akhāka biwajhin ṭalīq
+        </p>
+        <br>
+        <p>"Do not belittle any good deed, even if it is just meeting your brother with a cheerful face." </p>
+        <p class="text-sm text-gray-500">[Sahih Muslim 2626]</p>
+      </div>
+
+      <!-- Hadith 17 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«مَنْ لَمْ يَشْكُرِ النَّاسَ لَمْ يَشْكُرِ اللَّهَ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Man lam yashkur an-nāsa lam yashkur Allāh</p>
+        <br>
+        <p>"He who does not thank the people, does not thank Allah." </p>
+        <p class="text-sm text-gray-500">[Sunan Abi Dawood 4811]</p>
+      </div>
+
+      <!-- Hadith 18 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«إِنَّ مِنَ الْبِرِّ صِلَةَ الرَّحِمِ وَإِنَّ أَبَاهُ لِمِنْ أَعَظَمِ صِلَاتِكُمْ»
+        </div>
+        <br>
+        <p><strong>Transliteration:</strong> Inna mina al-birri ṣilata ar-raḥimi wa inna abāhu limina a‘ẓami ṣilātikum
+        </p>
+        <br>
+        <p>"Indeed, from the highest of acts of righteousness is maintaining family ties, and indeed your father is one
+          of the most significant of your family." </p>
+        <p class="text-sm text-gray-500">[Sunan al-Tirmidhi 1913]</p>
+      </div>
+
+      <!-- Hadith 19 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«لَا يُؤْمِنُ أَحَدُكُمْ حَتَّى يُحِبَّ لِأَخِيهِ مَا يُحِبُّ لِنَفْسِهِ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Lā yu’minu aḥadukum ḥattā yuḥibbu li-akhīhi mā yuḥibbu linafsihi</p>
+        <br>
+        <p>"None of you truly believes until he loves for his brother what he loves for himself." </p>
+        <p class="text-sm text-gray-500">[Sahih Muslim 45]</p>
+      </div>
+
+      <!-- Hadith 20 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«مَنْ صَارَتْ لَهُ قُدَمٌ فِي الرَّحْمَةِ فَسَعِدَتْ فِيهِ وَحَسُنَتْ وَفَجُهُهُ
+          فِي النَّارِ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Man ṣārat lahu qudamun fi ar-raḥmati fa-sa‘idat fīhī wa ḥasanat wa fujuhu
+          fi an-nār</p>
+        <br>
+        <p>"Whoever has a footstep in the path of mercy, it will bring him happiness and good in this world and the
+          next, and his face will not be in the fire." </p>
+        <p class="text-sm text-gray-500">[Sahih Muslim 159]</p>
+      </div>
+
+      <!-- Hadith 21 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«الْإِيمَانُ يَقُولُ: أَتِي فَحَقِّ تَحَقُّونَ فِي مَا تَقُولُونَ وَفِي مَا
+          تَفْعَلُونَ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Al-īmānu yaqūlu: Atī faḥaqqi taḥaqqūna fī mā taqūlūna wa fī mā taf‘alūn</p>
+        <br>
+        <p>"Faith says: ‘You shall be true in what you say and in what you do.'" </p>
+        <p class="text-sm text-gray-500">[Sunan Ibn Majah 4236]</p>
+      </div>
+
+      <!-- Hadith 22 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«يُخْرِجُ اللَّهُ مِنَ النَّارِ مَنْ كَانَ فِي قَلْبِهِ مِثْقَالُ حَبَّةٍ مِنْ
+          خَرْدَلٍ مِنْ إِيمَانٍ</div>
+        <br>
+        <p><strong>Transliteration:</strong> Yukhriju Allāhu mina an-nāri man kāna fī qalbihi mithqālu ḥabbatin min
+          khardalin min īmān</p>
+        <br>
+        <p>"Allah will bring out from the Fire anyone who has in his heart faith equal to the weight of a mustard seed."
+        </p>
+        <p class="text-sm text-gray-500">[ Sahih al-Bukhari 22]</p>
+      </div>
+
+      <!-- Hadith 23 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«مَا مِنَ النَّاسِ مِنْ مُسْلِمٍ يُتَوَفَّى لَهُ ثَلاَثَةٌ لَمْ يَبْلُغُوا
+          الْحِنْثَ، إِلاَّ أَدْخَلَهُ اللَّهُ الْجَنَّةَ بِفَضْلِ رَحْمَتِهِ إِيَّاهُمْ»</div>
+        <br>
+        <p><strong>Transliteration:</strong>Mā mina an-nāsi min muslimin yutawaffā lahu thalāthatun lam yablughū
+          al-ḥinth, illā adkhalahu Allāhu al-jannata bifaḍli raḥmatihi iyyāhum </p>
+        <br>
+        <p>"A Muslim whose three children die before the age of puberty will be granted Paradise by Allah due to His
+          mercy for them.A Muslim whose three children die before the age of puberty will be granted Paradise by Allah
+          due to His mercy for them. </p>
+        <p class="text-sm text-gray-500">[ Sahih al-Bukhari 23]</p>
+      </div>
+
+      <!-- Hadith 24 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«مَنْ صَامَ يَوْمًا فِي سَبِيلِ اللَّهِ بَاعَدَ اللَّهُ وَجْهَهُ عَنْ النَّارِ
+          سَبْعِينَ خَرِيفًا»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Man ṣāma yawman fī sabīlillāhi bā‘ada Allāhu wajhahu ‘an an-nāri sab‘īn
+          kharīfān</p>
+        <br>
+        <p>"Whoever fasts a day for the sake of Allah, Allah will distance his face from the fire by seventy winters."
+        </p>
+        <p class="text-sm text-gray-500">[Sahih al-Bukhari 2840]</p>
+      </div>
+
+      <!-- Hadith 25 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«إِذَا أَحَبَّ اللَّهُ عَبْدًا دَعَا جِبْرِيلَ فَقَالَ: إِنِّي أُحِبُّ فُلَانًا
+          فَأَحِبُّهُ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Idhā aḥabba Allāhu ‘abdan da‘ā Jibrīlā faqāla: Innī uḥibbu fulānan
+          fa-aḥibbuhū</p>
+        <br>
+        <p>"When Allah loves a servant, He calls Jibril and says: 'I love so-and-so, so love him.'" </p>
+        <p class="text-sm text-gray-500">[Sahih Muslim 2637]</p>
+      </div>
+      <!-- Hadith 26 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«مَنْ لَا يُؤْمِنُ بِالْغَيْبِ لَا يَحْتَسِبُ أَجْرًا»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Man lā yu’minu bil-ghaybi lā yaḥtasib ajran</p>
+        <br>
+        <p>"Whoever does not believe in the unseen will not have a reward." </p>
+        <p class="text-sm text-gray-500">[Sahih al-Bukhari 4775]</p>
+      </div>
+
+      <!-- Hadith 27 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«إِنَّ اللَّهَ لَا يُحِبُّ كُلَّ جَوَابٍ وَلَا كُلَّ مُدَلَّسٍ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Inna Allāha lā yuḥibbu kulla jawābin wa lā kulla mudallasin</p>
+        <br>
+        <p>"Indeed, Allah does not like every talkative person, nor does He like every deceiver." </p>
+        <p class="text-sm text-gray-500">[Sahih Muslim 2324]</p>
+      </div>
+
+      <!-- Hadith 28 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«إِنَّ اللَّهَ كَتَبَ الإِحْسَانَ عَلَى كُلِّ شَيْءٍ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Inna Allāha kataba al-iḥsāna ‘alā kulli shay’in</p>
+        <br>
+        <p>"Indeed, Allah has prescribed excellence (ihsan) in everything."</p>
+        <p class="text-sm text-gray-500">[Sahih Muslim 1955]</p>
+      </div>
+      <!-- Hadith 29 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«إِذَا رَأَيْتُمْ مَن يَجْتَمِعُ فِي قُدْرَةٍ فَارْتَقُوا فِيهِ وَيُصِيبُ لَكُمْ
+          مَا يَصِيبُهُ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Idhā ra’aytum man yajtamī‘u fī qudratin fārtaqū fīhī wa yusību lakum mā
+          yaṣībuhū</p>
+        <br>
+        <p>"When you see someone gathering in a blessed place, strive to be there, for you will share in what he
+          receives." </p>
+        <p class="text-sm text-gray-500">[Sunan Ibn Majah 3979]</p>
+      </div>
+
+      <!-- Hadith 30 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«مَن جَاءَ فِي قَلْبِهِ شَكٌّ فَذُوقُوا فِي قُرْبَتِهِ مَا حَلَّ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Man jā’a fī qalbihi shakkun fa dhūqū fī qurbatihi mā ḥall</p>
+        <br>
+        <p>"Whoever comes to you with doubt in his heart, let him taste the consequence of his proximity." </p>
+        <p class="text-sm text-gray-500">[Sunan Abi Dawood 4230]</p>
+      </div>
+
+      <!-- Hadith 31 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«الْجَنَّةُ تَحْتَ ظِلِّ السُّيُوفِ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Al-Jannah tuḥtā ẓilli as-suyūfi</p>
+        <br>
+        <p>"Paradise is under the shadow of swords." </p>
+        <p class="text-sm text-gray-500">[Sahih al-Bukhari 2816]</p>
+      </div>
+
+      <!-- Hadith 32 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«مَا رَحِمَ اللَّهُ قَلْبًا لَمْ يَرْحَمِ النَّاسَ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Mā raḥima Allāhu qalban lam yarḥam an-nāsa</p>
+        <br>
+        <p>"Allah does not show mercy to a heart that does not show mercy to others." </p>
+        <p class="text-sm text-gray-500">[Sahih al-Bukhari 5664]</p>
+      </div>
+
+      <!-- Hadith 33 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«أَفْضَلُ النَّاسِ أَنْفَعُهُمْ لِلنَّاسِ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Afḍalu an-nāsi anfa‘uhum li-an-nāsi</p>
+        <br>
+        <p>"The best of people are those who are most beneficial to others." </p>
+        <p class="text-sm text-gray-500">[Sahih al-Jami 3293]</p>
+      </div>
+
+      <!-- Hadith 34 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«إِذَا فَرَغَ عَبْدٌ مِّن سَلاَتِهِ فَسَجَّدَ لِمَنِ اسْتَحَقَّ لَهُ سَجَّدَ فِي
+          مَرْحَجٍ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Idhā faraġ ‘abdu min salātihi fasajda liman istaḥqqa lahu sajda fi marḥaj
+        </p>
+        <br>
+        <p>"When a servant finishes their prayer and prostrates to the One who is worthy of such a prostration, it
+          becomes a place of success." </p>
+        <p class="text-sm text-gray-500">[Sunan al-Tirmidhi 2638]</p>
+      </div>
+
+      <!-- Hadith 35 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«إِذَا سَأَلْتُمْ اللَّهَ فَسْأَلُوا الْجَنَّةَ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Idhā sa'altum Allāha fas’alu al-Jannah</p>
+        <br>
+        <p>"When you ask Allah, ask Him for Paradise." </p>
+        <p class="text-sm text-gray-500">[Sahih Muslim 2477]</p>
+      </div>
+
+      <!-- Hadith 36 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«مَنْ كَانَ يُؤْمِنُ بِاللَّهِ وَالْيَوْمِ الآخِرِ فَلْيَقُلْ خَيْرًا أَوْ
+          لِيَصْمُتْ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Man kāna yu’minu billāhi wa al-yawm al-ākhir falyaqul khayran aw liyasmut
+        </p>
+        <br>
+        <p>"Whoever believes in Allah and the Last Day should speak good or remain silent."</p>
+        <p class="text-sm text-gray-500">[Sahih al-Bukhari 6136, Sahih Muslim 47]</p>
+      </div>
+
+      <!-- Hadith 37 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«مَنْ لَا يَرْحَمِ النَّاسَ لَا يَرْحَمْهُ اللَّهُ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Man lā yarḥam an-nāsa lā yarḥamhu Allāh</p>
+        <br>
+        <p>"Whoever does not show mercy to people, Allah will not show mercy to him."</p>
+        <p class="text-sm text-gray-500">[Sahih al-Bukhari 6013]</p>
+      </div>
+
+      <!-- Hadith 38 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«الْكَلِمَةُ الطَّيِّبَةُ صَدَقَةٌ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Al-kalimatu aṭ-ṭayyibatu ṣadaqah</p>
+        <br>
+        <p>"A good word is charity."</p>
+        <p class="text-sm text-gray-500">[Sahih al-Bukhari 2989]</p>
+      </div>
+
+      <!-- Hadith 39 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«الْمُؤْمِنُ لِلْمُؤْمِنِ كَالْبُنْيَانِ يَشُدُّ بَعْضُهُ بَعْضًا»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Al-mu’minu lil-mu’mini kal-bunyāni yashuddu ba‘ḍuhu ba‘ḍan</p>
+        <br>
+        <p>"A believer to another believer is like a building whose different parts enforce each other."</p>
+        <p class="text-sm text-gray-500">[Sahih al-Bukhari 481]</p>
+      </div>
+
+      <!-- Hadith 40 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«مَنْ دَلَّ عَلَى خَيْرٍ فَلَهُ مِثْلُ أَجْرِ فَاعِلِهِ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Man dalla ‘alā khayrin falahu mithlu ajri fā‘ilihi</p>
+        <br>
+        <p>"Whoever guides someone to goodness will have a reward like one who did it."</p>
+        <p class="text-sm text-gray-500">[Sahih Muslim 1893]</p>
+      </div>
+
+      <!-- Hadith 41 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«الْمُسْلِمُ مَنْ سَلِمَ الْمُسْلِمُونَ مِنْ لِسَانِهِ وَيَدِهِ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Al-muslimu man salima al-muslimūna min lisānihi wa yadihi</p>
+        <br>
+        <p>"A Muslim is the one from whose tongue and hand the Muslims are safe."</p>
+        <p class="text-sm text-gray-500">[Sahih al-Bukhari 10]</p>
+      </div>
+
+      <!-- Hadith 42 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«مَنْ لَا يَشْكُرِ النَّاسَ لَا يَشْكُرِ اللَّهَ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Man lā yashkur an-nāsa lā yashkur Allāh</p>
+        <br>
+        <p>"He who does not thank people does not thank Allah."</p>
+        <p class="text-sm text-gray-500">[Sunan Abi Dawood 4811]</p>
+      </div>
+
+      <!-- Hadith 43 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«الْجَنَّةُ أَقْرَبُ إِلَى أَحَدِكُمْ مِنْ شِرَاكِ نَعْلِهِ، وَالنَّارُ مِثْلُ
+          ذَلِكَ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Al-jannatu aqrabu ilā aḥadikum min shirāki na‘lihi, wa an-nāru mithlu
+          dhālik</p>
+        <br>
+        <p>"Paradise is closer to any of you than the strap of his sandal, and so is the Hellfire."</p>
+        <p class="text-sm text-gray-500">[Sahih al-Bukhari 6488]</p>
+      </div>
+
+      <!-- Hadith 44 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«مَنْ لَا يَرْحَمْ صَغِيرَنَا وَلَا يَعْرِفْ حَقَّ كَبِيرِنَا فَلَيْسَ مِنَّا»
+        </div>
+        <br>
+        <p><strong>Transliteration:</strong> Man lā yarḥam ṣaghīranā wa lā ya‘rif ḥaqqa kabīrinā falaysa minnā</p>
+        <br>
+        <p>"He is not one of us who does not show mercy to our young ones and respect to our elders."</p>
+        <p class="text-sm text-gray-500">[Sunan Abi Dawood 4943]</p>
+      </div>
+
+      <!-- Hadith 45 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«الْبِرُّ حُسْنُ الْخُلُقِ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Al-birru ḥusnu al-khuluq</p>
+        <br>
+        <p>"Righteousness is good character."</p>
+        <p class="text-sm text-gray-500">[Sahih Muslim 2553]</p>
+      </div>
+
+      <!-- Hadith 46 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«الْمُؤْمِنُ مِرْآةُ الْمُؤْمِنِ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Al-mu’minu mir’ātu al-mu’min</p>
+        <br>
+        <p>"A believer is the mirror of another believer."</p>
+        <p class="text-sm text-gray-500">[Sunan Abi Dawood 4918]</p>
+      </div>
+
+      <!-- Hadith 47 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«الْمُؤْمِنُ مَنْ أَمِنَهُ النَّاسُ عَلَى دِمَائِهِمْ وَأَمْوَالِهِمْ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Al-mu’minu man aminahu an-nāsu ‘alā dimā’ihim wa amwālihim</p>
+        <br>
+        <p>"A believer is one from whom people's lives and wealth are safe."</p>
+        <p class="text-sm text-gray-500">[Sunan al-Tirmidhi 2627]</p>
+      </div>
+
+      <!-- Hadith 48 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«الْحَيَاءُ لَا يَأْتِي إِلَّا بِخَيْرٍ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Al-ḥayā’u lā ya’tī illā bikhayr</p>
+        <br>
+        <p>"Modesty brings nothing but good."</p>
+        <p class="text-sm text-gray-500">[Sahih al-Bukhari 6117]</p>
+      </div>
+
+      <!-- Hadith 49 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«مَنْ لَا يَسْتَحْيِ فَلْيَصْنَعْ مَا شَاءَ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Man lā yastaḥyi falyasna‘ mā shā’a</p>
+        <br>
+        <p>"If you feel no shame, then do as you wish."</p>
+        <p class="text-sm text-gray-500">[Sahih al-Bukhari 3483]</p>
+      </div>
+
+      <!-- Hadith 50 -->
+      <div class="scroll-card bg-[#18403b]">
+        <div class="calligraphy mb-2">«الطُّهُورُ شَطْرُ الْإِيمَانِ»</div>
+        <br>
+        <p><strong>Transliteration:</strong> Aṭ-ṭuhūru shaṭru al-īmān</p>
+        <br>
+        <p>"Purity is half of faith."</p>
+        <p class="text-sm text-gray-500">[Sahih Muslim 223]</p>
+      </div>
+
+
+  </section>
+
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 bg-[#f9f7f1]">
+    <div class="container mx-auto px-6">
+      <div class="bg-white p-8 rounded-lg shadow-lg max-w-xl mx-auto">
+        <h2 class="text-2xl font-bold mb-4 text-center">Get in Touch</h2>
+        <form action="https://formsubmit.co/dreamrizq@gmail.com" method="POST">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://your-redirect-url.com/thankyou.html"> <!-- Optional -->
+
+          <input type="text" name="name" placeholder="Your Name" required class="w-full mb-4 p-3 border rounded" />
+          <input type="email" name="email" placeholder="Your Email" required class="w-full mb-4 p-3 border rounded" />
+          <textarea name="message" placeholder="Your Message" required
+            class="w-full mb-4 p-3 border rounded"></textarea>
+          <button type="submit" class="w-full bg-[#102a27] text-white py-3 rounded hover:bg-[#0a1c1b]">Send
+            Message</button>
+        </form>
+      </div>
+      <div class="mt-6 flex justify-center space-x-6">
+        <!-- Instagram -->
+        <a href="https://instagram.com/dreamrizq" target="_blank"
+          class="inline-flex items-center text-[#102a27] hover:text-[#0a1c1b]">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6 mr-2" viewBox="0 0 24 24">
+            <path
+              d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5Zm4.25 3.25a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5Zm0 1.5a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5ZM17.5 6a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5Z" />
+          </svg>
+          @dreamrizq
+        </a>
+
+        <!-- Pipe Separator -->
+  <span class="text-[#102a27]">|</span>
+
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@dreamrizq" target="_blank"
+          class="inline-flex items-center text-[#102a27] hover:text-[#0a1c1b]">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6 mr-2" viewBox="0 0 24 24">
+            <path
+              d="M12.75 2h2.25a5.25 5.25 0 0 0 5.25 5.25v2.25a7.5 7.5 0 0 1-5.25-2.25v7.5a5.25 5.25 0 1 1-5.25-5.25v2.25a3 3 0 1 0 3 3V2z" />
+          </svg>
+          @dreamrizq
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <script>
+    document.getElementById('ameen-btn').addEventListener('click', function () {
+      document.getElementById('ameen-feedback').textContent = 'Ameen! Your prayer has been received.';
+    });
+  </script>
+
+</body>
+<!-- Footer -->
+<footer class="bg-[#102a27] text-white py-8 mt-16">
+  <div class="container mx-auto px-6 flex justify-center items-center text-sm">
+    <p>&copy; 2025 Dream Rizq. All rights reserved.</p>
+  </div>
+</footer>
+
+</html>
